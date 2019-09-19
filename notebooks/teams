@@ -29,9 +29,6 @@ Grizzlies,MEM
 Pelicans,NOP
 Spurs,SAS
 Supersonics,SEA
-Canada,CAN
-United States,USA
-China,CHN
 BRK,BKN
 PHO,PHX
 NJN,BKN
@@ -40,3 +37,4 @@ CHO,CHA
 Bullets,WAS
 Mavs,DAL
 Sixers,PHI
+TrailBlazers,POR
