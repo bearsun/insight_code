@@ -1,6 +1,6 @@
 # list of files
 
-##Week 1
+## Week 1
 
 scrapping data using reddit api praw
 ./notebooks/praw_scrap_pilot.ipynb
@@ -8,7 +8,7 @@ scrapping data using reddit api praw
 EDA for week 1 demo
 ./notebooks/Wk1_Demo.ipynb
 
-##Week 2
+## Week 2
 
 scrapping all NBA 18-19 regular season thread IDs from pushshift api (directory of all posts)
 ./notebooks/pushshift_scrap_submissions_reg18.ipynb
