@@ -4,7 +4,6 @@ from joblib import load
 app = Flask(__name__)
 tfidf = load('tfidf.joblib')
 tfidf_nb_app = load('tfidf_nb_app.joblib')
-cla = tfidf_nb_app.classes_
 
 @app.route('/') #we are now using these methods to get user input
 def home_page():
@@ -25,4 +24,4 @@ def home_post():
 
 # start the server with the 'run()' method
 if __name__ == "__main__":
-	app.run(debug=True) #will run locally http://127.0.0.1:5000/
+	app.run()
