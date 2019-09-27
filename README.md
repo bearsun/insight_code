@@ -19,6 +19,19 @@ scrapping all regular season threads/comments from praw api (all data)
 NLP, model training, etc. for week 2 demo  
 ./notebooks/Wk2_mvp.ipynb  
 
+## Week 3
+scrapping all users' comment history (which subreddits they commented before)
+./notebooks/scrap_user_history.ipynb
+
+updated models for week 3 demo
+./notebooks/Wk3_ner_textrank.ipynb
+
+code to run Name Entity Recognition (NER)
+./scripts/ner1.py
+
+code to run TextRank keyword extraction
+./scripts/textrank.py
+
 ## miscs
 
 dictionary of {team names : team abbrev.}  
