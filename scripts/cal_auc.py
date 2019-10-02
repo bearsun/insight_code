@@ -13,14 +13,14 @@ def cal_auc(model, X_test, y_test):
 
 	output
 	-----
-	None
+	float: micro auc
 	'''
 
 	# prediction probability
 	y_test_prob = model.predict_proba(X_test)
 
 	# one-hot encode 31 classes
-	enc = OneHotEncoder()
+	enc = OneHotEncoder(categories='auto')
 	y_test_ohe = enc.fit_transform(y_test.values.reshape(-1, 1)).toarray()
 
 	# Compute ROC curve and ROC area for each class
@@ -36,7 +36,4 @@ def cal_auc(model, X_test, y_test):
 	fpr["micro"], tpr["micro"], _ = roc_curve(y_test_ohe.ravel(), y_test_prob.ravel())
 	roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
 
-	print('auc:')
-	print(roc_auc['micro'])
-
-#	return roc_auc['micro']
+	return roc_auc['micro']

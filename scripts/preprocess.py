@@ -17,13 +17,10 @@ def preprocess_one(text, b_punct):
 	-----
 	str cleaned3: cleaned text
 	'''
-
     # remove links and emojis
     cleaned1 = re.sub(r'((http|ftp|https):\/\/)?[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?', ' ', str(text))
-
-    #replace special char like 🏀
+	#replace special char
     cleaned2 = cleaned1.encode('ascii', 'ignore').decode('ascii')
-    
     #remove \n \t \r
     cleaned3 = cleaned2.translate(str.maketrans("\n\t\r", "   "))
     
