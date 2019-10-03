@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>NBA Fan test</title>
+  <title>NBA Fan Identifier</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,42 +36,27 @@
       <div class="row h-100">
         <div class="col-12 my-auto">
           <div class="masthead-content text-white py-5 py-md-0">
-            <h1 class="mb-3">NBA Fan Test</h1>
-            <p class="mb-5">Please enter your comment below!</p>
+            <h1 class="mb-1">NBA Fan Identifier</h1>
+            <p class="mb-3">Please enter your comment below!</p>
             <div class="input-group input-group-newsletter">
               	<form action="/output" method="GET" id="user_input">
-                    <input class="form-control" type="text" id="user_input" name='user_input' placeholder="e.g. blablabla">
+                    <input class="form-control" type="text" id="user_input" name='user_input' style='width:400px' placeholder="e.g. blablabla">
                	</form>
               <div>
              <button type="submit" class="btn btn-secondary btn-lg" form="user_input">Go!</button>
       		</div>
             </div>
-            <h3 class="mb-3">Welcome! <b>{{team}}</b> Fan!</h3>
+            <h2>Welcome! <b>{{team1}}</b> Fan!</h2>
+            <h4><img src = '../static/img/{{team1}}.png' id = 'imageBox' width=100 length=100> &nbsp;&nbsp;&nbsp;
+            {{team1}} &nbsp;&nbsp;&nbsp; {{prob1}} % </h4>
+            <h4><img src = '../static/img/{{team2}}.png' id = 'imageBox' width=100 length=100> &nbsp;&nbsp;&nbsp;
+            {{team2}} &nbsp;&nbsp;&nbsp; {{prob2}} % </h4>
+            <h4><img src = '../static/img/{{team3}}.png' id = 'imageBox' width=100 length=100> &nbsp;&nbsp;&nbsp;
+            {{team3}} &nbsp;&nbsp;&nbsp; {{prob3}} % </h4>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <div class="social-icons">
-    <ul class="list-unstyled text-center mb-0">
-      <li class="list-unstyled-item">
-        <a href="#">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-      <li class="list-unstyled-item">
-        <a href="#">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </li>
-      <li class="list-unstyled-item">
-        <a href="#">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </li>
-    </ul>
   </div>
 
   <!-- Bootstrap core JavaScript -->
