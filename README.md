@@ -9,37 +9,58 @@ With this model, NBA could make about $607k from merchandise. My model could als
 
 ## Dependencies
 * Data Scraping:
- * [praw 6.3.1](https://praw.readthedocs.io/en/latest/)
+  * [praw 6.3.1](https://praw.readthedocs.io/en/latest/)
 * NLP:
- * [spaCy 2.1.8](https://spacy.io/)
- * [gensim 3.7.3](https://radimrehurek.com/gensim/)
+  * [spaCy 2.1.8](https://spacy.io/)
+  * [gensim 3.7.3](https://radimrehurek.com/gensim/)
 * Machine Learning:
- * [scikit-learn 0.21.2](https://scikit-learn.org/stable/)
+  * [scikit-learn 0.21.2](https://scikit-learn.org/stable/)
 
 ## Usage
 * Scrap data
- 1. Scrap titles/ids of all comment threads:
-  python ./scripts/scraping/pushshift_scrap.py
- 2. Scrap all comments
-  python ./scripts/scraping/praw_scrap.py
- 3. Scrap users' visiting history
-  python ./scripts/scraping/praw_scrap_history.py
+  1. Scrap titles/ids of all comment threads:  
+    python ./scripts/scraping/pushshift_scrap.py
+  2. Scrap all comments  
+    python ./scripts/scraping/praw_scrap.py
+  3. Scrap users' visiting history  
+    python ./scripts/scraping/praw_scrap_history.py
 
-* Run models
- python models.py
+* Run models  
+  python models.py
 
 ## List of other scripts
-./scripts/mvp.py               MVP model using comments + tf-idf + MultinomialNB  
-./scripts/model2.py            Model 2 using comments + NER + tf-idf + SMOTE + MultinomialNB  
-./scripts/model3.py            Model 3 using comments + NER + TextRank + SMOTE + MultinomialNB  
-./scripts/model4.py            Model 4 using history + tf-idf + SMOTE + MultinomialNB  
-./scripts/ner.py               Run Named Entity Recognition with spaCy  
-./scripts/textrank.py          Run TextRank keywords extraction with gensim  
-./scripts/load_data.py         Load all data  
-./scripts/preprocess.py        Preprocess texts, remove emoji, special charactors, etc.  
-./scripts/teamname_stdize.py   Standerdize all team names in training data into 3 letters (e.g. TOR)  
-./scripts/cal_auc.py           Calculate AUC for a model  
-./scripts/test_cal_auc.py      A simple unit test for cal_auc  
+MVP model using comments + tf-idf + MultinomialNB  
+./scripts/mvp.py  
+
+Model 2 using comments + NER + tf-idf + SMOTE + MultinomialNB  
+./scripts/model2.py  
+
+Model 3 using comments + NER + TextRank + SMOTE + MultinomialNB  
+./scripts/model3.py  
+
+Model 4 using history + tf-idf + SMOTE + MultinomialNB  
+./scripts/model4.py  
+
+Run Named Entity Recognition with spaCy  
+./scripts/ner.py  
+
+Run TextRank keywords extraction with gensim  
+./scripts/textrank.py  
+
+Load all data  
+./scripts/load_data.py  
+
+Preprocess texts, remove emoji, special charactors, etc.  
+./scripts/preprocess.py  
+
+Standerdize all team names in training data into 3 letters (e.g. TOR)  
+./scripts/teamname_stdize.py  
+
+Calculate AUC for a model  
+./scripts/cal_auc.py  
+
+A simple unit test for cal_auc  
+./scripts/test_cal_auc.py  
 
 ## List of other files
 
