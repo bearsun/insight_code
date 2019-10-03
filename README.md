@@ -2,6 +2,8 @@
 
 NBA league makes >$1 billion from merchandise annually. Meanwhile, there is a online sports forum wiht 2.7 million NBA fans. In order to capitalize on this big fan group, NBA could push ads for jerseys and gear to those users. On this forum, half of the fans have already tagged themselves as fans of a certain team. So, it is convinient to push team-specific ads to those users. However, for the other half of the users, how can we identify their favorite teams?  
 I took a Natural Language Processing approach to classify fans' teams by their comments and visiting history. By applying different feature extraction techniques and an ensemble model, the prediction reached a classificaiton accuray of 60%, which is 18.8x to the chance level and 2.2x to the MVP model.   
+![approach](https://github.com/bearsun/insight_code/raw/master/figures/approach.png)
+![performance](https://github.com/bearsun/insight_code/raw/master/figures/performance.png)
 With this model, NBA could make about $607k from merchandise. My model could also generate to any online sports forums.  
 
 
