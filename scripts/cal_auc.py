@@ -8,7 +8,7 @@ def cal_auc(model, X_test, y_test):
 
     input
     -----
-    obj model: model file with function predict_proba
+    obj model: model with function predict_proba
     pd.df X_test: testing data features
     pd.df y_test: testing data labels
 
