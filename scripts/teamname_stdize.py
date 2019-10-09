@@ -40,13 +40,13 @@ def teamname_stdize(ds):
 
     input
     -----
-    pd.df ds: a dataframe with column 'flair'
+    pd.df ds: a dataframe with column 'team'
 
     output:
     pd.df: a dataframe with standerdized teamnames
     '''
 
-    team_names = pd.read_csv('teams', names=['name', 'abbrs'])
+    team_names = pd.read_csv('../data/teams', names=['name', 'abbrs'])
     team_dict = team_names.set_index('name').to_dict()['abbrs']
     team_fulls = team_names['name'].to_list()
     team_abbrs = team_names['abbrs'].to_list()
