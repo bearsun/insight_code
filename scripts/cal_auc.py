@@ -1,8 +1,8 @@
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.metrics import roc_curve, auc
+from sklearn.preprocessing import LabelBinarizer
+from sklearn.metrics import roc_auc_score
 
 
-def cal_auc(model, X_test, y_test):
+def cal_auc(model, X_test, y_test, method = 'micro'):
     '''
     calculate micro auc across all classes
 
@@ -11,6 +11,7 @@ def cal_auc(model, X_test, y_test):
     obj model: model with function predict_proba
     pd.df X_test: testing data features
     pd.df y_test: testing data labels
+    str method: the method to average across classes
 
     output
     -----
@@ -18,24 +19,10 @@ def cal_auc(model, X_test, y_test):
     '''
 
     # prediction probability
-    y_test_prob = model.predict_proba(X_test)
+    prob = model.predict_proba(X_test)
 
-    # one-hot encode 31 classes
-    enc = OneHotEncoder(categories='auto')
-    y_test_ohe = enc.fit_transform(y_test.values.reshape(-1, 1)).toarray()
+    # binarize 31 classes
+    lb = LabelBinarizer()
+    true = lb.fit_transform(y_test)
 
-    # Compute ROC curve and ROC area for each class
-    n_classes = 31
-    fpr = dict()
-    tpr = dict()
-    roc_auc = dict()
-    for i in range(n_classes):
-        fpr[i], tpr[i], _ = roc_curve(y_test_ohe[:, i], y_test_prob[:, i])
-        roc_auc[i] = auc(fpr[i], tpr[i])
-
-    # calculate micro auc
-    fpr["micro"], tpr["micro"], _ = roc_curve(
-        y_test_ohe.ravel(), y_test_prob.ravel())
-    roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
-
-    return roc_auc['micro']
+    return roc_auc_score(true, prob, average = method)
