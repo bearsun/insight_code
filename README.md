@@ -4,11 +4,16 @@ NBA league makes >$1 billion from merchandise annually. Meanwhile, there is an o
 
 I took a Natural Language Processing approach to classify fans' teams by their comments and visiting history on other forums. By applying different feature extraction techniques and an ensemble model, the prediction reached a classification accuracy of 64%, which is 20x to the chance level and 2.2x to my MVP model.  
 
-With my model, NBA could make about $648k from merchandise. My model could also generate to any online sports forums.  
+With my model, NBA could make about $648k from merchandise. My model could also be applied to other online sports forums.  
 
 ![approach](https://github.com/bearsun/insight_code/raw/master/figures/approach.png)
 ![performance](https://github.com/bearsun/insight_code/raw/master/figures/performance.png)
 
+## Webapp: NBA Fan Identifier
+[Type in your comment then we can tell which NBA team you like](http://datadriveway.me/).  
+
+## Presentation on the project
+[Insight Project](https://sites.google.com/site/liweisunpro/insight)  
 
 ## Dependencies
 * Data Scraping:
@@ -59,8 +64,3 @@ Calculate AUC for a model
 
 A simple unit test for cal_auc  
 ./scripts/test_cal_auc.py  
-
-### Miscs
-
-Dictionary of {team names : team abbrev.}  
-./notebooks/teams
