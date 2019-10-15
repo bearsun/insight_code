@@ -38,14 +38,24 @@ With my model, NBA could make about $648k from merchandise. My model could also 
 
 ## Docker image
 I made a Docker image with scrapped data and the final model (Wk3_Final_Model.ipynb) which can be run by itself. Ask me if you want a copy of the image.    
+
+
 The Docker image was made by running:  
-sudo docker build -t insight . -f ./docker/Dockerfile    
+sudo docker build -t insight . -f ./docker/Dockerfile  
+
+
 The Docker image can be run by:  
 sudo docker run --name insight -p 8888:8888 insight  
+
+
 Then go to: localhost:8888/tree  
 Ask me for the password!  
+
+
 The notebook can be found at:  
 /home/insight/notebooks/  
+
+
 To clean the container, run:  
 sudo docker rm insight
 
