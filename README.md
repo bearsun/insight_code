@@ -25,7 +25,7 @@ With my model, NBA could make about $648k from merchandise. My model could also 
   * [scikit-learn 0.21.2](https://scikit-learn.org/stable/)
   * [imblearn 0.5.0](https://imbalanced-learn.readthedocs.io/en/stable/index.html)
 
-## Repository organization
+## Repository folders
 * docker: docker configure files
 * figures: figures used in README
 * notebooks: jupyter notebooks
