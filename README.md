@@ -37,7 +37,7 @@ With my model, NBA could make about $648k from merchandise. My model could also 
   ./notebooks/Wk3_Final_Model.ipynb
 
 ## Docker image
-I made a Docker image with scrapped data and the final model (Wk3_Final_Model.ipynb) which can be run by itself. Ask me if you want a copy of the image.    
+I made a Docker image with scrapped data and the final model (Wk3_Final_Model.ipynb). Ask me if you want a copy of the image.    
 
 
 The Docker image was made by running:  
