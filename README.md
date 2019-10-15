@@ -24,6 +24,14 @@ With my model, NBA could make about $648k from merchandise. My model could also 
 * Machine Learning:
   * [scikit-learn 0.21.2](https://scikit-learn.org/stable/)
   * [imblearn 0.5.0](https://imbalanced-learn.readthedocs.io/en/stable/index.html)
+
+## Repository organization
+* docker: docker configure files
+* figures: figures used in README
+* notebooks: jupyter notebooks
+* scripts: python functions
+* webapp: code to deploy the webapp
+
 ## Usage
 * Scrap data
   1. Scrap titles/ids of all comment threads:  
@@ -66,6 +74,7 @@ sudo docker rm insight
   ./notebooks/Wk2_EDA_MVP.ipynb  
 * Week 3: Optimizing the model and creating an ensemble model  
   ./notebooks/Wk3_Final_Model.ipynb  
+
 ## List of other scripts
 Run Named Entity Recognition with spaCy  
 ./scripts/ner.py  
