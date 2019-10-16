@@ -2,7 +2,7 @@ from sklearn.preprocessing import LabelBinarizer
 from sklearn.metrics import roc_auc_score
 
 
-def cal_auc(model, X_test, y_test, method = 'micro'):
+def cal_auc(model, X_test, y_test, method = 'weighted'):
     '''
     calculate micro auc across all classes
 
@@ -15,7 +15,7 @@ def cal_auc(model, X_test, y_test, method = 'micro'):
 
     output
     -----
-    float: micro auc
+    float: auc
     '''
 
     # prediction probability
