@@ -27,6 +27,7 @@ COPY /notebooks/kwords2.txt /home/insight/notebooks/
 COPY /scripts/cal_auc.py /home/insight/scripts/
 COPY /scripts/teamname_stdize.py /home/insight/scripts/
 COPY /scripts/preprocess.py /home/insight/scripts/
+COPY /scripts/plot_confusion_matrix.py /home/insight/scripts/
 
 # configure jupyter notebook
 RUN mkdir /root/.jupyter

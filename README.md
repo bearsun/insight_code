@@ -96,3 +96,6 @@ Calculate AUC for a model
 
 A simple unit test for cal_auc  
 ./scripts/test_cal_auc.py  
+
+Calculate and plot confusion matrix  
+./scripts/plot_confusion_matrix.py
